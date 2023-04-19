@@ -12,16 +12,20 @@ import Header from './components/header/Header'
 import Footer from "./components/footer/Footer"
 function App() {
     const dispatch=useDispatch() 
-    const url=useSelector((state)=>state.home.url
-  ) 
+    const url=useSelector((state)=>state.home.url) 
 
     useEffect(()=>{
-        apitesting()
+        fetchApiConfig()
     },[])
-    const apitesting=()=>{
-      fetchDataFromApi("/movie/popular").then((res)=>{
+    const fetchApiConfig=()=>{
+      fetchDataFromApi("/configuration").then((res)=>{
         console.log(res)
-        dispatch(getApiConfiguration(res))
+        const url={
+          backdrop: res.images.secure_base_url + "original",
+          poster: res.images.secure_base_url + "original",
+          profile: res.images.secure_base_url + "original",
+        }
+        dispatch(getApiConfiguration(url))
       })
     }
   
@@ -35,7 +39,7 @@ function App() {
       <Route path='/explore/:mediaType' element={<Explore/>} />
       <Route path='*' element={<NotFound/>} />
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
    </Router>
   )
 }
