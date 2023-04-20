@@ -37,7 +37,7 @@ function HeroBannerr() {
       <ContentWrapper>
       <div className="wrapper">
         <div className="heroBannerContent">
-          <span className='title'>Well Come</span>
+          <span className='title'>WelCome</span>
           <span className='subTitle'>
             Millions of Movie ,TV Shows and people
             to discover Expolore now

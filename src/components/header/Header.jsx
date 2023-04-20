@@ -33,7 +33,6 @@ const Header = () => {
         setShow("top")
       }
       setLastScrollY(window.scrollY)
-      console.log(lastScrollY)
     }
 
     useEffect(()=>{
