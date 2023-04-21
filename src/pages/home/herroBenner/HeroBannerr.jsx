@@ -51,7 +51,6 @@ function HeroBannerr() {
           </div>
         </div>
       </div>
-      <div style={{height:5000}}></div>
       </ContentWrapper>
     </div>
   )
