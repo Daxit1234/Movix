@@ -5,6 +5,10 @@
     .resultNotFound {
         font-size: 24px;
         color: var(--black-light);
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
     }
     .pageTitle {
         font-size: 24px;
